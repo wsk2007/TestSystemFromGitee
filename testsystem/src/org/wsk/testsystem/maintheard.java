@@ -38,9 +38,9 @@ public class maintheard {
 		q2.setIsmarked(false);
 		qlist.add(q1);
 		qlist.add(q2);
-		qusetionlist l = new qusetionlist("list");
-		l.addqusetion(qlist);
-		System.out.println(l.getqusetion(0).checkawnser());
+		qusetionlist ll = new qusetionlist("list");
+		ll.addqusetion(qlist);
+		System.out.println(ll.getqusetion(0).checkawnser());
 	}
 		
 
