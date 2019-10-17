@@ -36,6 +36,7 @@ public class gui extends JFrame {
 	 * Create the frame.
 	 */
 	public gui() {
+		setTitle("\u8003\u8BD5\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -48,7 +49,11 @@ public class gui extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(91, 96, 241, 73);
+		btnNewButton.setBounds(87, 50, 241, 73);
 		contentPane.add(btnNewButton);
+		
+		JButton button = new JButton("\u9000\u51FA");
+		button.setBounds(87, 146, 241, 73);
+		contentPane.add(button);
 	}
 }
