@@ -1,10 +1,10 @@
 package org.wsk.testsystem;
 
-public class givequestion {
-	qusetionlist list;
-	int num;
+public class qusetiongiver {
+	private qusetionlist list;
+	private int num;
 	
-	public givequestion(qusetionlist qlist){
+	public qusetiongiver(qusetionlist qlist){
 		list = qlist;
 		num = 0;
 	}
