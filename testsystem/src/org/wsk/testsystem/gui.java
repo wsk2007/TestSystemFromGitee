@@ -11,6 +11,9 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+import javax.swing.JComboBox;
+import javax.swing.JList;
 
 public class gui extends JFrame {
 
@@ -38,7 +41,7 @@ public class gui extends JFrame {
 	public gui() {
 		setTitle("\u8003\u8BD5\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 575, 388);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -49,11 +52,23 @@ public class gui extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(87, 50, 241, 73);
+		btnNewButton.setBounds(217, 230, 136, 44);
 		contentPane.add(btnNewButton);
 		
 		JButton button = new JButton("\u9000\u51FA");
-		button.setBounds(87, 146, 241, 73);
+		button.setBounds(396, 296, 136, 44);
 		contentPane.add(button);
+		
+		JButton button_1 = new JButton("\u65B0\u5EFA.....");
+		button_1.setBounds(217, 296, 136, 44);
+		contentPane.add(button_1);
+		
+		JButton button_2 = new JButton("\u5220\u9664....");
+		button_2.setBounds(36, 296, 136, 44);
+		contentPane.add(button_2);
+		
+		JList list = new JList();
+		list.setBounds(48, 35, 455, 185);
+		contentPane.add(list);
 	}
 }
