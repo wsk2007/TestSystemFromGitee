@@ -39,38 +39,45 @@ public class randomgiver {
 		if(num ==1) {
 			throw new TestSystemException("没有问题列表！ The list is empty!");
 		}else {
-		
-			return checklist(sr.nextInt(num - 1));
+			int listnum;
+			listnum = sr.nextInt(num - 1);
+			qusetiongiver rql = null;
+			if(listnum == 1) {
+				rql = l1;
+			}if(listnum == 2) {
+				rql = l2;
+			}if(listnum == 3) {
+				rql = l3;
+			}if(listnum == 4) {
+				rql = l4;
+			}if(listnum == 5) {
+				rql = l5;
+			}
+			return rql;
 		}
 		
 	}
 	
-	private qusetiongiver checklist (int listnum) {
-		
-		if(num == 1) {
-			
-			return l1;
-			
-		}if(num == 2) {
-			
-			return l2; 
-			
-		}if(num == 3) {
-			
-			return l3; 
-			
-		}if(num == 4) {
-			
-			return l4; 
-			
-		}if(num == 5) {
-			
-			return l5;
-			
-		}
-		
-		
-		
+
+
+	public qusetiongiver getL1() {
+		return l1;
+	}
+
+	public qusetiongiver getL2() {
+		return l2;
+	}
+
+	public qusetiongiver getL3() {
+		return l3;
+	}
+
+	public qusetiongiver getL4() {
+		return l4;
+	}
+
+	public qusetiongiver getL5() {
+		return l5;
 	}
 
 }
