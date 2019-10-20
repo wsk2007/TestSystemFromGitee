@@ -8,7 +8,7 @@ public class test {
 	private randomgiver rg;
 	private boolean isstart;
 	private UUID u = new UUID(1 , 5);
-	private UUID testuuid;
+	private String testuuid;
 	public test(String tname, qusetiongiver tg) {
 		g = tg;
 		israndom = false;
@@ -25,7 +25,7 @@ public class test {
 	
 	public void start() {
 		isstart = true;
-		testuuid = u.randomUUID();
+		testuuid = u.randomUUID().toString().replace("-", "").toLowerCase();
 	}
 
 	public String getName() {
@@ -48,7 +48,7 @@ public class test {
 		return isstart;
 	}
 
-	public UUID getTestuuid() {
+	public String getTestuuid() {
 		return testuuid;
 	}
 
