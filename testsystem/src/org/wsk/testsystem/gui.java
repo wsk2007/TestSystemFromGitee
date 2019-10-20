@@ -52,23 +52,35 @@ public class gui extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnNewButton.setBounds(217, 230, 136, 44);
+		btnNewButton.setBounds(217, 242, 136, 44);
 		contentPane.add(btnNewButton);
 		
 		JButton button = new JButton("\u9000\u51FA");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		button.setBounds(396, 296, 136, 44);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("\u65B0\u5EFA.....");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		button_1.setBounds(217, 296, 136, 44);
 		contentPane.add(button_1);
 		
 		JButton button_2 = new JButton("\u5220\u9664....");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		button_2.setBounds(36, 296, 136, 44);
 		contentPane.add(button_2);
 		
 		JList list = new JList();
-		list.setBounds(48, 35, 455, 185);
+		list.setBounds(36, 10, 496, 222);
 		contentPane.add(list);
 	}
 }
