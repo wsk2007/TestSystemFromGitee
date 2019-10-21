@@ -37,8 +37,29 @@ public class test {
 	}
 	
 	private void testing() {
-		
+		qusetiongiver rug;
+		System.out.println("您现在进行的是 " + name + "考试");
+		if(israndom == true) {
+			try {
+				rug =  rg.giverandom();
+				System.out.println("本次考试采用随机题库，您的题库是： " + rug.getList().getName());
+				testing2(rug);
+			} catch (TestSystemException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+		}else {
+			testing2(g);
+		}
 	}
+	
+	private void testing2(qusetiongiver rug) {
+		System.out.println("第一题： ");
+		String message;
+		message = rug.nextqusetion().getname();	
+		getinput(message);
+	}
+	
 	
 	private String getinput(String inputtext) {
 		Scanner s = new Scanner(System.in);

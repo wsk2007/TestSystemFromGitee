@@ -19,4 +19,8 @@ public class qusetiongiver {
 		return num;
 	}
 
+	public qusetionlist getList() {
+		return list;
+	}
+
 }
