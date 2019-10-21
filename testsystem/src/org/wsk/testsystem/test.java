@@ -26,6 +26,26 @@ public class test {
 	public void start() {
 		isstart = true;
 		testuuid = u.randomUUID().toString().replace("-", "").toLowerCase();
+		echo();
+		testing();
+	}
+	
+	private void echo() {
+		System.out.println("Starting test test " + name);
+		System.out.println("The UUID of this test is: " + testuuid);
+		System.out.println("Random qusetion list: " + israndom);
+	}
+	
+	private void testing() {
+		
+	}
+	
+	private String getinput(String inputtext) {
+		Scanner s = new Scanner(System.in);
+		String input;
+		System.out.print(inputtext);
+		input = s.next();
+		return input;
 	}
 
 	public String getName() {
