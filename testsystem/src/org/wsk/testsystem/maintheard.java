@@ -41,6 +41,9 @@ public class maintheard {
 		qusetionlist l = new qusetionlist("list");
 		l.addqusetion(qlist);
 		System.out.println(l.getqusetion(0).checkawnser());
+		qusetiongiver qg = new qusetiongiver(l);
+		test t = new test("testtest", qg);
+		t.start();
 	}
 		
 

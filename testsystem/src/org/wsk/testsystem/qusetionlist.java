@@ -38,5 +38,8 @@ public class qusetionlist {
 	public qusetion getqusetion(int index){
 		return qlist.get(index);
 	}
+	public int getleanth() {
+		return qlist.size();
+	}
 
 }

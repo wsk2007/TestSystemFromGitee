@@ -6,7 +6,7 @@ import com.*;
 public class qusetion{
 	private String name;
 	private int num;
-	
+	private boolean isright;
 	public int getNum() {
 		return num;
 	}
@@ -99,16 +99,22 @@ public class qusetion{
 	}
 	
 	public Boolean checkawnser(){
-		Boolean isright;
+		Boolean qisright;
 		if(awnser == yourawnser){
+			qisright = true;
 			isright = true;
-			return isright;
+			return qisright;
 				
 		}else{
+			qisright = false;
 			isright = false;
-			return isright;
+			return qisright;
 		}
 		
+	}
+
+	public boolean isIsright() {
+		return isright;
 	}
 	
 
