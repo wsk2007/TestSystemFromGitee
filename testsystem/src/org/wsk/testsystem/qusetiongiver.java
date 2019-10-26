@@ -10,9 +10,9 @@ public class qusetiongiver {
 	}
 	
 	public qusetion nextqusetion(){
-		num = num +1;
-		return list.getqusetion(num - 1);
-		
+		qusetion q = list.getqusetion(num);
+		num++;
+		return q;
 	}
 	
 	public int getnum() {

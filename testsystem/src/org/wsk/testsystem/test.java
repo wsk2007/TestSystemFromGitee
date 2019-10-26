@@ -57,8 +57,10 @@ public class test {
 		String message;
 		String awnser;
 		qusetion q;
-		for(int i = 1; i <= rug.getnum(); i++) {
-			System.out.println("第" + i + "题： ");
+		int num;
+		for(int i = 0; i <= rug.getnum(); i++) {
+			num = i + 1;
+			System.out.println("第" + num + "题： ");
 		    q = rug.nextqusetion();	
 		    message = q.getname();
 		    awnser = getinput(message);
@@ -78,7 +80,7 @@ public class test {
 		int correctnum = 0;
 		rug.reset();
 		boolean isright;
-		for(int i = 1; i <= rug.getnum(); i++) {
+		for(int i = 0; i <= rug.getnum(); i++) {
 			isright = rug.nextqusetion().isIsright();
 			if(isright == true) {
 				correctnum++;

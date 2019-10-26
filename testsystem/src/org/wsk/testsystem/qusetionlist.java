@@ -29,7 +29,7 @@ public class qusetionlist {
 	public void addqusetion(qusetion q){
 		qlist.add(q);
 	}
-	public void addqusetion(Collection c){
+	public void addqusetion(Collection<qusetion> c){
 		qlist.addAll(c);
 	}
 	public void removequsetion(Object o){
