@@ -96,6 +96,7 @@ public class test {
 		String input;
 		System.out.print(inputtext);
 		input = s.next();
+		s.close();
 		return input;
 	}
 
