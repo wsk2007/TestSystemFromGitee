@@ -94,10 +94,17 @@ public class test {
 	
 	
 	private String getinput(String inputtext) {
+		String input = null;
 		Scanner s = new Scanner(System.in);
-		String input;
 		System.out.print(inputtext);
-		input = s.next();
+		try {
+		    
+		    
+		    input = s.next();
+		    
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		s.close();
 		return input;
 	}
