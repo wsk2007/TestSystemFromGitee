@@ -54,10 +54,40 @@ public class test {
 	}
 	
 	private void testing2(qusetiongiver rug) {
-		System.out.println("第一题： ");
 		String message;
-		message = rug.nextqusetion().getname();	
-		getinput(message);
+		String awnser;
+		qusetion q;
+		for(int i = 1; i <= rug.getnum(); i++) {
+			System.out.println("第" + i + "题： ");
+		    q = rug.nextqusetion();	
+		    message = q.getname();
+		    awnser = getinput(message);
+		    try {
+			    q.setyourawnser(awnser);
+		    } catch (TestSystemException e) {
+			    // TODO 自动生成的 catch 块
+			    e.printStackTrace();
+		    }
+		    q.checkawnser();
+		}
+		finish(rug);
+	}
+	
+	private void finish(qusetiongiver rug){
+		int wholenum = rug.getnum();
+		int correctnum = 0;
+		rug.reset();
+		boolean isright;
+		for(int i = 1; i <= rug.getnum(); i++) {
+			isright = rug.nextqusetion().isIsright();
+			if(isright == true) {
+				correctnum++;
+			}else {
+				
+			}
+		}
+		System.out.println("考试结束");
+		System.out.println("你的分数是:" + wholenum + "/" + correctnum);
 	}
 	
 	

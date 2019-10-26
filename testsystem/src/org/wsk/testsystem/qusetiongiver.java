@@ -22,5 +22,9 @@ public class qusetiongiver {
 	public qusetionlist getList() {
 		return list;
 	}
+	
+	public void reset() {
+		num = 0;
+	}
 
 }
