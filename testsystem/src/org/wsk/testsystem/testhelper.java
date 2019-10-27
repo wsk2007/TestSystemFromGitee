@@ -115,7 +115,12 @@ public class testhelper implements Serializable{
 			e.printStackTrace();
 		}
 		s.close();
+		isstart = false;
 		return input;
+	}
+	
+	public void savetest() {
+		
 	}
 
 	public String getName() {
