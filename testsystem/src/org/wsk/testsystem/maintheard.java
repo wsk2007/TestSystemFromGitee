@@ -42,7 +42,7 @@ public class maintheard {
 		l.addqusetion(qlist);
 		System.out.println(l.getqusetion(0).checkawnser());
 		qusetiongiver qg = new qusetiongiver(l);
-		test t = new test("testtest", qg);
+		testhelper t = new testhelper("testtest", qg);
 		t.start();
 	}
 		

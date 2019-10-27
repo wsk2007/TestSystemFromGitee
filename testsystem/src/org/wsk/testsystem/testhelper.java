@@ -1,6 +1,6 @@
 package org.wsk.testsystem;
 import java.util.*;
-public class test {
+public class testhelper {
 	
 	private String name;
 	private boolean israndom;
@@ -9,14 +9,14 @@ public class test {
 	private boolean isstart;
 	private UUID u = new UUID(1 , 5);
 	private String testuuid;
-	public test(String tname, qusetiongiver tg) {
+	public testhelper(String tname, qusetiongiver tg) {
 		g = tg;
 		israndom = false;
 		name = tname;
 		isstart = false;
 	}
 	
-	public test(String tname, randomgiver trg) {
+	public testhelper(String tname, randomgiver trg) {
 		rg = trg;
 		israndom = true;
 		name = tname;
