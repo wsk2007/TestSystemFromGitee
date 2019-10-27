@@ -1,6 +1,7 @@
 package org.wsk.testsystem;
 import java.util.*;
-public class testhelper {
+import java.io.*;
+public class testhelper implements Serializable{
 	
 	private String name;
 	private boolean israndom;
@@ -73,7 +74,6 @@ public class testhelper {
 		    try {
 			    q.setyourawnser(awnser);
 		    } catch (TestSystemException e) {
-			    // TODO 自动生成的 catch 块
 			    e.printStackTrace();
 		    }
 		    q.checkawnser();
