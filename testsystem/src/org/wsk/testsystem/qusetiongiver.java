@@ -10,7 +10,20 @@ public class qusetiongiver {
 	}
 	
 	public qusetion nextqusetion(){
-		qusetion q = list.getqusetion(num);
+		qusetion q; 
+		try {
+			q = list.getqusetion(num);
+		}catch(Exception ex){
+			qusetion nq = new qusetion();
+			try {
+				nq.setname("no");
+			} catch (TestSystemException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+			return nq;
+		}
+		
 		num++;
 		return q;
 	}

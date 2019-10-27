@@ -55,15 +55,21 @@ public class test {
 	
 	private void testing2(qusetiongiver rug) {
 		String message;
-		String awnser;
+		String awnser = null;
 		qusetion q;
 		int num;
 		for(int i = 0; i <= rug.getnum(); i++) {
 			num = i + 1;
 			System.out.println("µÚ" + num + "Ìâ£º ");
 		    q = rug.nextqusetion();	
-		    message = q.getname();
-		    awnser = getinput(message);
+		    if(q.getname() == "no") {
+		    	finish(rug);
+		    	return;
+		    }else {
+		    	message = q.getname();
+		        awnser = getinput(message);
+		    }
+		    
 		    try {
 			    q.setyourawnser(awnser);
 		    } catch (TestSystemException e) {
@@ -71,6 +77,9 @@ public class test {
 			    e.printStackTrace();
 		    }
 		    q.checkawnser();
+		    if(i == rug.getnum() - 1) {
+		    	break;
+		    }
 		}
 		finish(rug);
 	}
