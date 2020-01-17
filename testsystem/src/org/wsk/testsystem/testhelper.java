@@ -59,7 +59,7 @@ public class testhelper implements Serializable{
 		String awnser = null;
 		qusetion q;
 		int num;
-		for(int i = 0; i <= rug.getnum(); i++) {
+		for(int i = 0; i <= rug.getList().getleanth(); i++) {
 			num = i + 1;
 			System.out.println("µÚ" + num + "Ìâ£º ");
 		    q = rug.nextqusetion();	
