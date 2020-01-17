@@ -10,6 +10,7 @@ public class testhelper implements Serializable{
 	private boolean isstart;
 	private UUID u = new UUID(1 , 5);
 	private String testuuid;
+	Scanner s = new Scanner(System.in);
 	public testhelper(String tname, qusetiongiver tg) {
 		g = tg;
 		israndom = false;
@@ -77,19 +78,17 @@ public class testhelper implements Serializable{
 			    e.printStackTrace();
 		    }
 		    q.checkawnser();
-		    if(i == rug.getnum() - 1) {
-		    	break;
-		    }
+		 
 		}
 		finish(rug);
 	}
 	
 	private void finish(qusetiongiver rug){
-		int wholenum = rug.getnum();
+		int wholenum = rug.getList().getleanth();
 		int correctnum = 0;
 		rug.reset();
 		boolean isright;
-		for(int i = 0; i <= rug.getnum(); i++) {
+		for(int i = 0; i <= rug.getList().getleanth(); i++) {
 			isright = rug.nextqusetion().isIsright();
 			if(isright == true) {
 				correctnum++;
@@ -97,6 +96,7 @@ public class testhelper implements Serializable{
 				
 			}
 		}
+		s.close();
 		System.out.println("考试结束");
 		System.out.println("你的分数是:" + wholenum + "/" + correctnum);
 	}
@@ -104,7 +104,6 @@ public class testhelper implements Serializable{
 	
 	private String getinput(String inputtext) {
 		String input = null;
-		Scanner s = new Scanner(System.in);
 		System.out.print(inputtext);
 		try {
 		    
@@ -114,7 +113,6 @@ public class testhelper implements Serializable{
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		s.close();
 		isstart = false;
 		return input;
 	}

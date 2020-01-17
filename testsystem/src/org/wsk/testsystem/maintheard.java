@@ -10,7 +10,7 @@ public class maintheard {
 	    qusetion q2 = new qusetion();
 	    q2.setawnser("456");
 	    q2.setname("456");
-	    q1.setcanawnserbeempty(false);
+	    q2.setcanawnserbeempty(false);
 	    qusetionlist ql = new qusetionlist("qlist");
 	    ql.addqusetion(q1);
 	    ql.addqusetion(q2);
