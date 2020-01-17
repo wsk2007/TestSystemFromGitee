@@ -62,12 +62,13 @@ public class testhelper implements Serializable{
 		int num;
 		for(int i = 0; i <= rug.getList().getleanth(); i++) {
 			num = i + 1;
-			System.out.println("第" + num + "题： ");
+			
 		    q = rug.nextqusetion();	
 		    if(q.getname() == "no") {
 		    	finish(rug);
 		    	return;
 		    }else {
+		    	System.out.println("第" + num + "题： ");
 		    	message = q.getname();
 		        awnser = getinput(message);
 		    }
