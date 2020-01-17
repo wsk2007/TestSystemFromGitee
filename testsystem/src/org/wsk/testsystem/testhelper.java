@@ -71,14 +71,16 @@ public class testhelper implements Serializable{
 		    	System.out.println("µÚ" + num + "Ìâ£º ");
 		    	message = q.getname();
 		        awnser = getinput(message);
-		    }
-		    
-		    try {
+		        try {
 			    q.setyourawnser(awnser);
 		    } catch (TestSystemException e) {
 			    e.printStackTrace();
 		    }
-		    q.checkawnser();
+		        q.checkawnser();
+		    }
+		    
+		    
+		    
 		 
 		}
 		finish(rug);
@@ -92,7 +94,7 @@ public class testhelper implements Serializable{
 		for(int i = 0; i <= rug.getList().getleanth(); i++) {
 			isright = rug.nextqusetion().isIsright();
 			if(isright == true) {
-				correctnum++;
+				correctnum = correctnum + 1;
 			}else {
 				
 			}
