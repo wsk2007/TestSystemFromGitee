@@ -10,7 +10,7 @@ public class testhelper implements Serializable{
 	transient private boolean isstart;
 	transient private UUID u = new UUID(1 , 5);
 	transient private String testuuid;
-	transient Scanner s = new Scanner(System.in);
+	transient Scanner s;
 	public testhelper(String tname, qusetiongiver tg) {
 		g = tg;
 		israndom = false;
@@ -28,6 +28,7 @@ public class testhelper implements Serializable{
 	public void start() {
 		isstart = true;
 		testuuid = u.randomUUID().toString().replace("-", "").toLowerCase();
+		s = new Scanner(System.in);
 		echo();
 		testing();
 	}
