@@ -1,6 +1,7 @@
 package org.wsk.testsystem;
+import java.io.Serializable;
 import java.util.*;
-public class qusetionlist {
+public class qusetionlist implements Serializable{
 	private List<qusetion> qlist = new ArrayList<>();
 	private String name;
 	public String getName() {

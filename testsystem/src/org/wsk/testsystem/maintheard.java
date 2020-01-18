@@ -1,7 +1,9 @@
 package org.wsk.testsystem;
+import java.io.Serializable;
 import java.util.*;
 
-public class maintheard {
+public class maintheard implements Serializable{
+	static boolean debug;
 	public void test() throws TestSystemException{
 		qusetion q1 = new qusetion();
 		q1.setawnser("123");
@@ -21,6 +23,12 @@ public class maintheard {
 		
 
 	public static void main(String[] args) {
+		if (args.length == 0) {}
+		else {
+			if (args[0].equals("debug")){
+				debug = true;
+			}
+		}
 		try {
 			new maintheard().test();
 		} catch (TestSystemException e) {

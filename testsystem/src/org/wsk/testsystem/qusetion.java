@@ -1,12 +1,14 @@
 package org.wsk.testsystem;
 import java.*;
+import java.io.Serializable;
+
 import javax.*;
 import sun.*;
 import com.*;
-public class qusetion{
+public class qusetion implements Serializable{
 	private String name;
 	private int num;
-	private boolean isright;
+	transient private boolean isright;
 	public int getNum() {
 		return num;
 	}

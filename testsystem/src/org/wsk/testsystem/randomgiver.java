@@ -1,14 +1,15 @@
 package org.wsk.testsystem;
+import java.io.Serializable;
 import java.security.*;
 import java.util.*;
-public class randomgiver {
+public class randomgiver implements Serializable{
 	private qusetiongiver l1;
 	private qusetiongiver l2;
 	private qusetiongiver l3;
 	private qusetiongiver l4;
 	private qusetiongiver l5;
 	private int num;
-	SecureRandom sr = new SecureRandom();
+	transient SecureRandom sr = new SecureRandom();
 	public randomgiver() {
 		
 		num = 1;

@@ -1,5 +1,8 @@
 package org.wsk.testsystem;
-public class TestSystemException extends Exception {
+
+import java.io.Serializable;
+
+public class TestSystemException extends Exception implements Serializable{
 	public TestSystemException (String ErrMsg){
 		super(ErrMsg);
 	}

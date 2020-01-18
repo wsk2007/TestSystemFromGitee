@@ -7,10 +7,10 @@ public class testhelper implements Serializable{
 	private boolean israndom;
 	private qusetiongiver g;
 	private randomgiver rg;
-	private boolean isstart;
-	private UUID u = new UUID(1 , 5);
-	private String testuuid;
-	Scanner s = new Scanner(System.in);
+	transient private boolean isstart;
+	transient private UUID u = new UUID(1 , 5);
+	transient private String testuuid;
+	transient Scanner s = new Scanner(System.in);
 	public testhelper(String tname, qusetiongiver tg) {
 		g = tg;
 		israndom = false;
@@ -33,9 +33,12 @@ public class testhelper implements Serializable{
 	}
 	
 	private void echo() {
-		System.out.println("Starting test test " + name);
-		System.out.println("The UUID of this test is: " + testuuid);
-		System.out.println("Random qusetion list: " + israndom);
+		if (maintheard.debug == true) {
+			System.out.println("Starting test " + name);
+		    System.out.println("TestID: " + testuuid);
+		    System.out.println("Random qusetion list: " + israndom);
+		}else {}
+		
 	}
 	
 	private void testing() {
@@ -99,9 +102,12 @@ public class testhelper implements Serializable{
 				
 			}
 		}
-		s.close();
+		
 		System.out.println("考试结束");
 		System.out.println("你的分数是:" + wholenum + "/" + correctnum);
+		if(maintheard.debug == true) {
+			savetest(this, rug);
+		}else{s.close();}
 	}
 	
 	
@@ -120,8 +126,25 @@ public class testhelper implements Serializable{
 		return input;
 	}
 	
-	public void savetest() {
-		
+	public void savetest(testhelper th, qusetiongiver g) {
+		if(getinput("Save test?").equals("yes")) {
+			g.reset();
+			String location;
+			location = getinput("location?");
+			try {
+				FileOutputStream fs = new FileOutputStream(location);
+				ObjectOutputStream os = new ObjectOutputStream(fs);
+				os.writeObject(th);
+				os.close();
+				s.close();
+			} catch (Exception e) {
+			
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
+			
+			
+		}
 	}
 
 	public String getName() {

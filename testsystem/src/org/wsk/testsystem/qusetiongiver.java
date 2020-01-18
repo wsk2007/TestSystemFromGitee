@@ -1,6 +1,8 @@
 package org.wsk.testsystem;
 
-public class qusetiongiver {
+import java.io.Serializable;
+
+public class qusetiongiver implements Serializable {
 	private qusetionlist list;
 	private int num;
 	
