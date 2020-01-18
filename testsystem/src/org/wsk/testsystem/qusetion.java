@@ -100,7 +100,7 @@ public class qusetion{
 	
 	public Boolean checkawnser(){
 		Boolean qisright;
-		if(awnser == yourawnser){
+		if(awnser.equals(yourawnser)){
 			qisright = true;
 			isright = true;
 			return qisright;
