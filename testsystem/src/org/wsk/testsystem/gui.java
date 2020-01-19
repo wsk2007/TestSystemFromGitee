@@ -14,6 +14,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.JComboBox;
 import javax.swing.JList;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class gui extends JFrame {
 
@@ -48,6 +50,11 @@ public class gui extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("\u5F00\u59CB");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+			}
+		});
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
