@@ -85,7 +85,7 @@ public class maintheard implements Serializable{
 		qusetiongiver[] qgl = new qusetiongiver[5];
 		int i = 0;
 		int ln;
-		for (int j = 0; j <= 5; j++) {
+		for (int j = 0; j <= 4; j++) {
 			qll[i] = new ArrayList<>();
 			i = 0;
 			ln = j + 1;
